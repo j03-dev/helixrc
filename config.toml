@@ -1,8 +1,7 @@
-theme = "github_dark"
+theme = "onedark"
 
 [editor]
 mouse = true
-cursorline = true
 auto-format = true
 auto-save = true
 
@@ -66,6 +65,8 @@ C-A-l = ":format"
 C-o = ":config-open"
 C-s = ":config-reload"
 C-x = ":buffer-close!"
+C-j = "copy_selection_on_next_line"
+C-k = "copy_selection_on_prev_line"
 
 H = "goto_previous_buffer"
 L = "goto_next_buffer"

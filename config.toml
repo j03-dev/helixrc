@@ -149,7 +149,7 @@ j = "jump_view_down"
 k = "jump_view_up"
 l = "jump_view_right"
 d = "hover"
-w.o = ":buffer-close-others!"
+w.o = ["wonly",":buffer-close-others!"]
 
 [keys.insert]
 esc = ["collapse_selection", "normal_mode"]

@@ -148,9 +148,7 @@ h = "jump_view_left"
 j = "jump_view_down"
 k = "jump_view_up"
 l = "jump_view_right"
-
 d = "hover"
-
 w.o = ":buffer-close-others!"
 
 [keys.insert]
@@ -174,7 +172,6 @@ y = [
   "flip_selections",
   "collapse_selection",
 ]
-c = ["yank_main_selection_to_clipboard", "delete_selection", "insert_mode"]
 S = "surround_add"
 u = ["switch_case", "collapse_selection", "normal_mode"]
 
@@ -188,7 +185,6 @@ K = [
   "paste_clipboard_before",
   "select_mode",
 ]
-
 J = [
   "yank_main_selection_to_clipboard",
   "delete_selection",

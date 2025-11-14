@@ -13,54 +13,6 @@ file-types = ["tera"]
 language-servers = ["tailwindcss-ls", "vscode-html-language-server"]
 
 [[language]]
-name = "javascript"
-shebangs = ["node"]
-roots = ["package.json"]
-file-types = ["js"]
-language-servers = [
-  "typescript-language-server",
-  "vscode-eslint-language-serve",
-  "vscode-langservers-extracted",
-]
-
-[[language]]
-name = "typescript"
-shebangs = ["node"]
-roots = ["tsconfig.json", "package.json"]
-file-types = ["ts"]
-language-servers = [
-  "typescript-language-server",
-  "vscode-eslint-language-serve",
-  "vscode-langservers-extracted",
-]
-
-[[language]]
-name = "jsx"
-shebangs = ["node"]
-roots = ["package.json"]
-file-types = ["jsx"]
-language-servers = [
-  "typescript-language-server",
-  "vscode-eslint-language-serve",
-  "tailwindcss-ls",
-]
-
-[[language]]
-name = "tsx"
-shebangs = ["node"]
-roots = ["tsconfig.json", "package.json"]
-file-types = ["tsx"]
-language-servers = [
-  "typescript-language-server",
-  "vscode-eslint-language-serve",
-  "typescript-language-server",
-]
-
-[language-server.typescript-language-server]
-command = "typescript-language-server"
-args = ["--stdio"]
-
-[[language]]
 name = "python"
 formatter = { command = "ruff", args = ["format", "-"] }
 language-servers = ["pylsp"]

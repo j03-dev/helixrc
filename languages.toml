@@ -18,8 +18,5 @@ formatter = { command = "ruff", args = ["format", "-"] }
 language-servers = ["pylsp"]
 auto-format = true
 
-[language-server.pylsp]
-command = "pylsp"
-
 [language-server.pylsp.config.pylsp.plugins.pycodestyle]
 ignore = ["E501", "W503"]

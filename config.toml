@@ -71,8 +71,8 @@ C-k = "copy_selection_on_prev_line"
 H = "goto_previous_buffer"
 L = "goto_next_buffer"
 
-"}" = "goto_next_paragraph"
-"{" = "goto_prev_paragraph"
+"^" = "goto_next_paragraph"
+"$" = "goto_prev_paragraph"
 
 c.e = [
   "move_next_word_end",
@@ -150,7 +150,7 @@ j = "jump_view_down"
 k = "jump_view_up"
 l = "jump_view_right"
 d = "hover"
-w.o = ["wonly",":buffer-close-others!"]
+w.o = ["wonly", ":buffer-close-others!"]
 
 [keys.insert]
 esc = ["collapse_selection", "normal_mode"]
@@ -159,8 +159,8 @@ C-space = "completion"
 [keys.select]
 esc = ["collapse_selection", "normal_mode"]
 
-"{" = ["extend_to_line_bounds", "goto_prev_paragraph"]
-"}" = ["extend_to_line_bounds", "goto_next_paragraph"]
+"^" = "goto_next_paragraph"
+"$" = "goto_prev_paragraph"
 
 V = ["select_mode", "extend_to_line_bounds"]
 
@@ -168,7 +168,7 @@ d = ["yank_main_selection_to_clipboard", "delete_selection"]
 x = ["yank_main_selection_to_clipboard", "delete_selection"]
 
 y = [
-  "yank_main_selection_to_clipboard",
+  ":clipboard-yank-join",
   "normal_mode",
   "flip_selections",
   "collapse_selection",
@@ -178,6 +178,9 @@ u = ["switch_case", "collapse_selection", "normal_mode"]
 
 i = "select_textobject_inner"
 a = "select_textobject_around"
+
+C-j = "copy_selection_on_next_line"
+C-k = "copy_selection_on_prev_line"
 
 K = [
   "yank_main_selection_to_clipboard",

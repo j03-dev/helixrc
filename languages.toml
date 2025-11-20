@@ -15,8 +15,9 @@ language-servers = ["tailwindcss-ls", "vscode-html-language-server"]
 [[language]]
 name = "python"
 formatter = { command = "ruff", args = ["format", "-"] }
-language-servers = ["pylsp"]
+language-servers = ["pyrefly"]
 auto-format = true
 
-[language-server.pylsp.config.pylsp.plugins.pycodestyle]
-ignore = ["E501", "W503"]
+[language-server.pyrefly]
+command = "pyrefly"
+args = ["lsp"]

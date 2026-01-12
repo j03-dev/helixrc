@@ -25,8 +25,8 @@
 
 ;;@doc
 ;; commit with message 
-(define (git-commit msg)
-  (shell "git" "commit" "-m" msg))
+(define (git-commit . msg)
+  (shell "git" "commit" "-m" (string-join msg " ")))
 
 ;;@doc
 ;; Open the helix.scm file

@@ -24,7 +24,7 @@
   (shell "git" "add" "%"))
 
 ;;@doc
-;; commit with message 
+;; Commit with message 
 (define (git-commit . msg)
   (shell "git" "commit" "-m" (string-join msg " "))
   (helix.reload-all))

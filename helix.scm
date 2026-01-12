@@ -27,7 +27,7 @@
 ;; commit with message 
 (define (git-commit . msg)
   (shell "git" "commit" "-m" (string-join msg " "))
-  (helix.reload))
+  (helix.reload-all))
 
 ;;@doc
 ;; Open the helix.scm file

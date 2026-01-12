@@ -12,12 +12,36 @@ name = "tera"
 file-types = ["tera"]
 language-servers = ["tailwindcss-ls", "vscode-html-language-server"]
 
+
+[[language]]
+name = "tsx"
+shebangs = ["node"]
+roots = ["tsconfig.json", "package.json"]
+file-types = ["tsx"]
+language-servers = [
+  "typescript-language-server",
+  "tailwindcss-ls"
+]
+
 [[language]]
 name = "python"
 formatter = { command = "ruff", args = ["format", "-"] }
-language-servers = ["pyrefly"]
+language-servers = ["ty"]
 auto-format = true
+
+[language-server.ty]
+command = "ty"
+args = ["server"]
 
 [language-server.pyrefly]
 command = "pyrefly"
 args = ["lsp"]
+
+[[language]]
+name = "scheme"
+file-types = ["scm"]
+language-servers = ["steel"]
+
+[language-server.steel]
+command = "steel-language-server"
+

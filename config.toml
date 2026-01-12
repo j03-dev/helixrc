@@ -1,4 +1,4 @@
-theme = "onedark"
+theme = "doom-one"
 
 [editor]
 mouse = true
@@ -29,16 +29,30 @@ cursor-line = "warning"
 [editor.whitespace.render]
 newline = "all"
 
+# ## Icon config ##
+# [icons.vcs]
+# enabled = true
+
+# [icons.fs]
+# enabled = true
+
+# [icons.ui]
+# workspace =  ""
+
+# [icons.ui.statusline]
+# separator = ""
+#################
+
 [editor.whitespace.characters]
 newline = "⏎"
 
-[editor.indent-guides]
-render = true
-character = "⸽" # Some characters that work well: "▏", "┆", "┊", "⸽"
+# [editor.indent-guides]
+# render = true
+# character ="▏" # Some characters that work well: "▏", "┆", "┊", "⸽"
 
 [editor.statusline]
-left = ["mode", "spinner", "workspace-diagnostics"]
-center = ["file-name"]
+left = ["mode", "spinner", "workspace-diagnostics", "file-name"]
+center = []
 right = ["version-control"]
 
 mode.normal = "N"
@@ -48,10 +62,10 @@ mode.select = "S"
 [editor.gutters]
 layout = ["spacer", "diff", "diagnostics", "line-numbers", "spacer"]
 
-[editor.cursor-shape]
-insert = "bar"
-normal = "block"
-select = "underline"
+# [editor.cursor-shape]
+# insert = "bar"
+# normal = "block"
+# select = "underline"
 
 [editor.file-picker]
 hidden = false
@@ -67,6 +81,8 @@ C-s = ":config-reload"
 C-x = ":buffer-close!"
 C-j = "copy_selection_on_next_line"
 C-k = "copy_selection_on_prev_line"
+
+g.m = ["goto_last_modified_file", "goto_last_modification"]
 
 H = "goto_previous_buffer"
 L = "goto_next_buffer"

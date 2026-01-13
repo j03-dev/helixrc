@@ -2,7 +2,7 @@
 (require (prefix-in helix. "helix/commands.scm"))
 (require (prefix-in helix.static. "helix/static.scm"))
 
-(provide shell git-add git-commit open-helix-scm open-init-scm)
+(provide shell git-add git-push git-pull git-commit open-helix-scm open-init-scm)
 
 (define (current-path)
   (let* ([focus (editor-focus)]
@@ -23,15 +23,26 @@
 (define (git-add)
   (shell "git" "add" "%"))
 
+
 ;;@doc
 ;; Commit with message 
 (define (git-commit . msg)
   (shell "git" "commit" "-m" (string-join msg " ")))
 
+
+(define (git-push)
+  (helix.run-shell-command "git push"))
+
+
+(define (git-pull)
+  (helix.run-shell-command "git pull"))
+
+
 ;;@doc
 ;; Open the helix.scm file
 (define (open-helix-scm)
   (helix.open (helix.static.get-helix-scm-path)))
+
 
 ;;@doc
 ;; Opens the init.scm file

@@ -38,7 +38,7 @@ command = "pyrefly"
 args = ["lsp"]
 
 [[language]]
-name = "scheme"
+name = "steel"
 file-types = ["scm"]
 language-servers = ["steel"]
 

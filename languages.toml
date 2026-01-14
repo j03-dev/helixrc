@@ -41,6 +41,8 @@ args = ["lsp"]
 name = "scheme"
 file-types = ["scm"]
 language-servers = ["steel"]
+formatter = { command = "schemat"}
+auto-format = true
 
 [language-server.steel]
 command = "steel-language-server"

@@ -13,17 +13,9 @@
 (define (format-args . raw-args)
   (map (lambda (a)
         (cond
-          ;; % placeholder
-          [(equal? a "%")
-            (current-path)]
-
-          ;; string → keep as-is
-          [(string? a)
-            a]
-
-          ;; everything else
-          [else
-            (value->string a)]))
+          [(equal? a "%") (current-path)]
+          [(string? a) a]
+          [else (value->string a)]))
     raw-args))
 
 (define (current-path)

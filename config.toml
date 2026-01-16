@@ -62,10 +62,10 @@ mode.select = "S"
 [editor.gutters]
 layout = ["spacer", "diff", "diagnostics", "line-numbers", "spacer"]
 
-# [editor.cursor-shape]
-# insert = "bar"
-# normal = "block"
-# select = "underline"
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
 
 [editor.file-picker]
 hidden = false

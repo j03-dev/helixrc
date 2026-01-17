@@ -1,5 +1,6 @@
 (require "helix/editor.scm")
-(require (only-in "helix/commands.scm" run-shell-command))
+(require (prefix-in helix. "helix/commands.scm"))
+(require (prefix-in helix.static. "helix/static.scm"))
 
 (provide git current-path)
 
@@ -7,8 +8,7 @@
   (let* ([formatted (apply format-args args)]
          [escaped (map shell-escape formatted)]
          [cmd (string-append "git " (string-join escaped " "))])
-    (run-shell-command cmd))
-  (editor-document-reload))
+    (helix.run-shell-command cmd)))
 
 (define (format-args . raw-args)
   (map (lambda (a)
@@ -28,3 +28,9 @@
        (string-contains? s "'"))
     (string-append "'" s "'")
     s))
+
+(define (helix-scm-open)
+  (helix.open (helix.static.get-helix-scm-path)))
+
+(define (init-scm-open)
+  (helix.open (helix.static.get-init-scm-path)))

@@ -8,7 +8,7 @@
          [escaped (map shell-escape formatted)]
          [cmd (string-append "git " (string-join escaped " "))])
     (helix.run-shell-command cmd))
-  (helix.reload-all))
+  (helix.reload (current-path)))
 
 (define (format-args . raw-args)
   (map (lambda (a)

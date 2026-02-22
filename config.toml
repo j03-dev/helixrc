@@ -1,12 +1,13 @@
 theme = "doom-one"
 
 [editor]
-mouse = true
+mouse = false
 auto-format = true
 auto-save = true
 
 color-modes = true
 true-color = true
+cursorline = true
 
 shell = ["fish", "-c"]
 
@@ -17,6 +18,13 @@ bufferline = "multiple"
 popup-border = "popup"
 
 end-of-line-diagnostics = "hint"
+soft-wrap.enable = true
+
+[editor.clipboard-provider.custom]
+yank = { command = "xclip", args = ["-selection", "clipboard", "-o"] }
+paste = { command = "xclip", args = ["-selection", "clipboard"] }
+primary-yank = { command = "xclip", args = ["-selection", "primary", "-o"] }
+primary-paste = { command = "xclip", args = ["-selection", "primary"] }
 
 [editor.lsp]
 display-inlay-hints = false
@@ -46,9 +54,9 @@ newline = "all"
 [editor.whitespace.characters]
 newline = "⏎"
 
-# [editor.indent-guides]
-# render = true
-# character ="▏" # Some characters that work well: "▏", "┆", "┊", "⸽"
+[editor.indent-guides]
+render = true
+character ="▏" # Some characters that work well: "▏", "┆", "┊", "⸽"
 
 [editor.statusline]
 left = ["mode", "spinner", "workspace-diagnostics", "file-name"]
@@ -62,10 +70,10 @@ mode.select = "S"
 [editor.gutters]
 layout = ["spacer", "diff", "diagnostics", "line-numbers", "spacer"]
 
-[editor.cursor-shape]
-insert = "bar"
-normal = "block"
-select = "underline"
+# [editor.cursor-shape]
+# insert = "bar"
+# normal = "block"
+# select = "underline"
 
 [editor.file-picker]
 hidden = false

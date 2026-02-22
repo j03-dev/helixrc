@@ -1,3 +1,11 @@
+# [[language]]
+# name = "rust"
+# language-servers = ["ra-multiplex"]
+
+# [language-server.ra-multiplex]
+# command = "ra-multiplex"
+# args = ["client"]
+
 [[language]]
 name = "toml"
 formatter = { command = "taplo", args = ["fmt", "-"] }
@@ -46,4 +54,3 @@ auto-format = true
 
 [language-server.steel]
 command = "steel-language-server"
-

@@ -61,7 +61,6 @@ g.m = ["goto_last_modified_file", "goto_last_modification"]
 
 [keys.normal.space]
 G = "changed_file_picker"
-R = "@miw:clipboard-paste-replace<ret>"
 g = [":write-all", ":insert-output lazygit> /dev/tty", ":redraw", ":reload-all"]
 e = [
   ":sh rm -f /tmp/unique-file-h21a434",

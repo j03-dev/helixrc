@@ -62,6 +62,7 @@ g.m = ["goto_last_modified_file", "goto_last_modification"]
 [keys.normal.space]
 G = "changed_file_picker"
 g = [":write-all", ":insert-output lazygit> /dev/tty", ":redraw", ":reload-all"]
+t = ":create-file-tree"
 e = [
   ":sh rm -f /tmp/unique-file-h21a434",
   ":insert-output yazi '%{workspace_directory}' --chooser-file=/tmp/unique-file-h21a434",

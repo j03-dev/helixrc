@@ -1,6 +1,12 @@
 [[language]]
 name = "toml"
+language-servers = ["crates-lsp"]
 formatter = { command = "taplo", args = ["fmt", "-"] }
+
+[language-server.crates-lsp]
+command = "crates-lsp"
+required-root-patterns = ["Cargo.toml"]
+except-features = ["format"]
 
 [[language]]
 name = "jinja"
@@ -21,7 +27,10 @@ language-servers = ["typescript-language-server", "tailwindcss-ls"]
 [[language]]
 name = "python"
 formatter = { command = "ruff", args = ["format", "-"] }
-language-servers = ["ty", "helix-assist"]
+language-servers = ["pylsp"]
+
+[language-server.pylsp.config.pylsp.plugins.pycodestyle]
+ignore = ["E501", "E402"]
 
 [language-server.ty]
 command = "ty"

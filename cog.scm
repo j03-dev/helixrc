@@ -3,6 +3,6 @@
 
 (define dependencies
   '((#:name system-theme-hx #:git-url "https://github.com/j03-dev/system-theme.hx.git")
-    (#:name file-tree-hx #:git-url "https://github.com/j03-dev/file-tree.hx.git")))
+    (#:name oil-hx #:git-url "https://github.com/Ra77a3l3-jar/oil.hx.git")))
 
 (define dylibs '())

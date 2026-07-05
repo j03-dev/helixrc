@@ -13,7 +13,8 @@ name = "jinja"
 language-servers = ["tailwindcss-ls", "vscode-html-language-server"]
 
 [[language]]
-name = "tera"
+name = "htmldjango"
+file-types = ["tera", { glob = "*.html.tera" }]
 language-servers = ["tailwindcss-ls", "vscode-html-language-server"]
 
 

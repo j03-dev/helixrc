@@ -50,3 +50,7 @@ command = "steel-language-server"
 [language-server.helix-assist]
 command = "helix-assist"
 args = ["--handler", "gemini", "--num-suggestions", "2"]
+
+[[language]]
+name = "xml"
+formatter = {command = "xmllint", args=["--format", "-"]}

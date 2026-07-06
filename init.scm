@@ -10,14 +10,14 @@
 
 (keymap (global)
   (normal
-    (C-b ":oil-up")
+    (backspace ":oil-up")
     (C-h ":oil-toggle-hidden")
     (C-i ":oil-toggle-git-ignored")
-    (C-o ":oil")
+    (- ":oil")
     (C-p ":oil-paste")
     (C-q ":oil-close")
     (C-r ":oil-refresh")
     (C-s ":oil-save")
     (C-x ":oil-cut")
     (C-y ":oil-yank")
-    (space (o ":oil-enter"))))
+    (ret ":oil-enter")))

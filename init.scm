@@ -10,19 +10,14 @@
 
 (keymap (global)
   (normal
-    (space
-      (o
-        (o ":oil")
-        (e ":oil-enter")
-        (b ":oil-back")
-        (g ":oil-root")
-        (s ":oil-save")
-        (r ":oil-refresh")
-        (q ":oil-close")
-        (h ":oil-toggle-hidden")
-        (i ":oil-toggle-git-ignored")
-        (m
-          (y ":oil-yank")
-          (x ":oil-cut")
-          (p ":oil-paste")
-          (c ":oil-clipboard-clear"))))))
+    (C-b ":oil-up")
+    (C-h ":oil-toggle-hidden")
+    (C-i ":oil-toggle-git-ignored")
+    (C-o ":oil")
+    (C-p ":oil-paste")
+    (C-q ":oil-close")
+    (C-r ":oil-refresh")
+    (C-s ":oil-save")
+    (C-x ":oil-cut")
+    (C-y ":oil-yank")
+    (space (o ":oil-enter"))))

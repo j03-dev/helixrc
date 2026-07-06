@@ -43,9 +43,6 @@ L = "goto_next_buffer"
 "[" = "goto_prev_paragraph"
 
 C-A-l = ":format"
-C-o = ":config-open"
-C-s = ":config-reload"
-C-x = ":buffer-close!"
 C-j = "copy_selection_on_next_line"
 C-k = "copy_selection_on_prev_line"
 
@@ -62,14 +59,6 @@ g.m = ["goto_last_modified_file", "goto_last_modification"]
 [keys.normal.space]
 G = "changed_file_picker"
 g = [":write-all", ":insert-output lazygit> /dev/tty", ":redraw", ":reload-all"]
-e = [
-  ":sh rm -f /tmp/unique-file-h21a434",
-  ":insert-output yazi '%{workspace_directory}' --chooser-file=/tmp/unique-file-h21a434",
-  ":insert-output echo \"x1b[?1049h\" > /dev/tty",
-  ":open %sh{cat /tmp/unique-file-h21a434}",
-  ":reload-all",
-  ":redraw",
-]
 h = "jump_view_left"
 j = "jump_view_down"
 k = "jump_view_up"

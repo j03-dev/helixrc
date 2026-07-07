@@ -4,8 +4,6 @@
 (require "oil/oil.scm")
 (require "helix/keymaps.scm")
 
-;; Optional: set defaults (both #false by default)
-;; (oil-configure! show-dotfiles show-git-ignored)
 (oil-configure! #false #false)
 
 (keymap (global)

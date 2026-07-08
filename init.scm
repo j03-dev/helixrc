@@ -14,8 +14,11 @@
     (- ":oil")
     (C-p ":oil-paste")
     (C-q ":oil-close")
-    (C-r ":oil-refresh")
+    (C-R ":oil-refresh")
     (C-s ":oil-save")
     (C-x ":oil-cut")
     (C-y ":oil-yank")
     (ret ":oil-enter")))
+
+(require "fake-warp/fake-warp.scm")
+(install-fake-warp!)

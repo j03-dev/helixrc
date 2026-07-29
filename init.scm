@@ -1,11 +1,10 @@
 (require "system-theme-hx/system-theme.scm")
-(auto-theme "catppuccin_macchiato" "gruvbox_light_hard")
+(auto-theme "gruvbox" "gruvbox_light_hard")
 
 (require "oil/oil.scm")
-(require "helix/keymaps.scm")
-
 (oil-configure! #false #false)
 
+(require "helix/keymaps.scm")
 (keymap (global)
   (normal
     (backspace ":oil-up")

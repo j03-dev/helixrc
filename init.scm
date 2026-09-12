@@ -1,5 +1,5 @@
 (require "system-theme-hx/system-theme.scm")
-(auto-theme "gruvbox" "gruvbox_light_hard")
+(auto-theme "github_dark" "github_light")
 
 (require "oil/oil.scm")
 (oil-configure! #false #false)

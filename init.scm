@@ -23,11 +23,23 @@
 (install-fake-warp!)
 
 (require "moka/moka.scm")
-
 (moka-configure!
   #:sections
   (list
     (moka-section (list (moka-segment 'mode) (moka-segment 'file)) #:align 'left)
-    (moka-section (list (moka-segment 'lsp) (moka-segment 'git-branch) (moka-segment 'position)) #:align 'right)))
+    (moka-section (list (moka-segment 'lsp) (moka-segment 'git-branch)) #:align 'right)))
 
 (moka-enable!)
+
+(require "scopeline/scopeline.scm")
+(scopeline-configure!
+  #:separator
+  " › "
+  #:max-depth
+  0
+  #:show-file?
+  #t
+  #:position
+  'top-left
+  #:always-reserved?
+  #t)

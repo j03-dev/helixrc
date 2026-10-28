@@ -1,5 +1,5 @@
 (require "system-theme-hx/system-theme.scm")
-(auto-theme "ttox_soft" "ayu_light")
+(auto-theme "gruvbox" "gruvbox_light")
 
 (require "oil/oil.scm")
 (oil-configure! #false #false)
@@ -26,20 +26,8 @@
 (moka-configure!
   #:sections
   (list
-    (moka-section (list (moka-segment 'mode) (moka-segment 'file)) #:align 'left)
-    (moka-section (list (moka-segment 'lsp) (moka-segment 'git-branch)) #:align 'right)))
+    (moka-section (list (moka-segment 'mode) (moka-segment 'diagnostics)) #:align 'left)
+    (moka-section (list (moka-segment 'file)) #:align 'center)
+    (moka-section (list (moka-segment 'git-branch)) #:align 'right)))
 
 (moka-enable!)
-
-(require "scopeline/scopeline.scm")
-(scopeline-configure!
-  #:separator
-  " › "
-  #:max-depth
-  0
-  #:show-file?
-  #t
-  #:position
-  'top-left
-  #:always-reserved?
-  #t)

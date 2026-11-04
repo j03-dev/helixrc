@@ -1,5 +1,5 @@
 (require "system-theme-hx/system-theme.scm")
-(auto-theme "gruvbox" "gruvbox_light")
+(auto-theme "vim_dark_high_contrast" "eiffel")
 
 (require "oil/oil.scm")
 (oil-configure! #false #false)
@@ -31,3 +31,5 @@
     (moka-section (list (moka-segment 'git-branch)) #:align 'right)))
 
 (moka-enable!)
+
+(require "helix-git/helix-git.scm")

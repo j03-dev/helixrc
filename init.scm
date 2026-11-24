@@ -7,17 +7,37 @@
 (require "helix/keymaps.scm")
 (keymap (global)
   (normal
-    (backspace ":oil-up")
-    (C-h ":oil-toggle-hidden")
-    (C-i ":oil-toggle-git-ignored")
-    (- ":oil")
-    (C-p ":oil-paste")
-    (C-q ":oil-close")
-    (C-R ":oil-refresh")
-    (C-s ":oil-save")
-    (C-x ":oil-cut")
-    (C-y ":oil-yank")
-    (ret ":oil-enter")))
+    (- ":oil")))
+
+(define oil-keymaps
+  (hash
+    "normal"
+    (hash
+      "backspace"
+      ":oil-up"
+      "I"
+      ":oil-toggle-git-ignored"
+      "X"
+      ":oil-cut"
+      "c"
+      ":oil-clipboard-clear"
+      "h"
+      ":oil-toggle-hidden"
+      "p"
+      ":oil-paste"
+      "q"
+      ":oil-close"
+      "ret"
+      ":oil-enter"
+      "C-s"
+      ":oil-save"
+      "y"
+      ":oil-yank")))
+
+(define oil-keybindings (deep-copy-global-keybindings))
+(merge-keybindings oil-keybindings oil-keymaps)
+(set-global-buffer-or-extension-keymap
+  (hash OIL-BUFFER-NAME oil-keybindings))
 
 (require "fake-warp/fake-warp.scm")
 (install-fake-warp!)

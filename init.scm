@@ -35,21 +35,8 @@
 (require "helix-git/helix-git.scm")
 
 (require "xit/xit.scm")
-
+;wioweiw
 (keymap (global)
   (normal
     (space
-      (g
-        (g ":Git")
-        (c ":Git commit")
-        (d ":git-diff")
-        (D ":git-diff-split")
-        (s ":git-stage")
-        (u ":git-unstage")
-        (x ":git-discard")
-        (O ":git-resolve-ours")
-        (T ":git-resolve-theirs")
-        (p ":git-push")
-        (f ":git-pull")
-        (r ":git-refresh")
-        (q ":git-close")))))
+      (g ":Git"))))

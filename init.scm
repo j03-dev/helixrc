@@ -40,16 +40,16 @@
   (normal
     (space
       (g
-        (g ":Git") ;; <space>gg -> Open Git UI buffer
-        (c ":Git commit") ;; <space>gc -> Open commit buffer
-        (d ":git-diff") ;; <space>gd -> View diff
-        (D ":git-diff-split") ;; <space>gD -> View diff in vertical split
-        (s ":git-stage") ;; <space>gs -> Stage file under cursor
-        (u ":git-unstage") ;; <space>gu -> Unstage file under cursor
-        (x ":git-discard") ;; <space>gx -> Discard modifications / delete
-        (O ":git-resolve-ours") ;; <space>gO -> Resolve conflict with OURS
-        (T ":git-resolve-theirs") ;; <space>gT -> Resolve conflict with THEIRS
-        (p ":git-push") ;; <space>gp -> Git push
-        (f ":git-pull") ;; <space>gf -> Git pull
-        (r ":git-refresh") ;; <space>gr -> Refresh status
+        (g ":Git")
+        (c ":Git commit")
+        (d ":git-diff")
+        (D ":git-diff-split")
+        (s ":git-stage")
+        (u ":git-unstage")
+        (x ":git-discard")
+        (O ":git-resolve-ours")
+        (T ":git-resolve-theirs")
+        (p ":git-push")
+        (f ":git-pull")
+        (r ":git-refresh")
         (q ":git-close")))))

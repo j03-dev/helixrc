@@ -35,7 +35,7 @@
 (require "helix-git/helix-git.scm")
 
 (require "xit/xit.scm")
-;wioweiw
+
 (keymap (global)
   (normal
     (space

@@ -58,7 +58,7 @@ g.m = ["goto_last_modified_file", "goto_last_modification"]
 
 [keys.normal.space]
 G = "changed_file_picker"
-g = [":write-all", ":insert-output lazygit> /dev/tty", ":redraw", ":reload-all"]
+# g = [":write-all", ":insert-output lazygit> /dev/tty", ":redraw", ":reload-all"]
 h = "jump_view_left"
 j = "jump_view_down"
 k = "jump_view_up"

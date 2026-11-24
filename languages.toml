@@ -54,3 +54,18 @@ args = ["--handler", "gemini", "--num-suggestions", "2"]
 [[language]]
 name = "xml"
 formatter = { command = "xmllint", args = ["--format", "-"] }
+
+# >>> xit.hx >>>
+# Added by xit.hx installer
+[[language]]
+name = "xit"
+scope = "source.xit"
+file-types = []
+grammar = "xit"
+comment-token = "#"
+indent = { tab-width = 2, unit = "  " }
+
+[[grammar]]
+name = "xit"
+source = { path = "/home/manohy/.local/share/steel/cogs/xit/grammar/xit" }
+# <<< xit.hx <<<

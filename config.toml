@@ -13,11 +13,11 @@ popup-border = "popup"
 end-of-line-diagnostics = "hint"
 soft-wrap.enable = true
 
-[editor.clipboard-provider.custom]
-yank = { command = "xclip", args = ["-selection", "clipboard", "-o"] }
-paste = { command = "xclip", args = ["-selection", "clipboard"] }
-primary-yank = { command = "xclip", args = ["-selection", "primary", "-o"] }
-primary-paste = { command = "xclip", args = ["-selection", "primary"] }
+# [editor.clipboard-provider.custom]
+# yank = { command = "xclip", args = ["-selection", "clipboard", "-o"] }
+# paste = { command = "xclip", args = ["-selection", "clipboard"] }
+# primary-yank = { command = "xclip", args = ["-selection", "primary", "-o"] }
+# primary-paste = { command = "xclip", args = ["-selection", "primary"] }
 
 [editor.statusline]
 left = ["mode", "spinner", "workspace-diagnostics", "file-name"]

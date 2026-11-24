@@ -1,5 +1,5 @@
 (require "system-theme-hx/system-theme.scm")
-(auto-theme "vim_dark_high_contrast" "eiffel")
+(auto-theme "github_dark_dimmed" "nord_light")
 
 (require "oil/oil.scm")
 (oil-configure! #false #false)
@@ -33,3 +33,23 @@
 (moka-enable!)
 
 (require "helix-git/helix-git.scm")
+
+(require "xit/xit.scm")
+
+(keymap (global)
+  (normal
+    (space
+      (g
+        (g ":Git") ;; <space>gg -> Open Git UI buffer
+        (c ":Git commit") ;; <space>gc -> Open commit buffer
+        (d ":git-diff") ;; <space>gd -> View diff
+        (D ":git-diff-split") ;; <space>gD -> View diff in vertical split
+        (s ":git-stage") ;; <space>gs -> Stage file under cursor
+        (u ":git-unstage") ;; <space>gu -> Unstage file under cursor
+        (x ":git-discard") ;; <space>gx -> Discard modifications / delete
+        (O ":git-resolve-ours") ;; <space>gO -> Resolve conflict with OURS
+        (T ":git-resolve-theirs") ;; <space>gT -> Resolve conflict with THEIRS
+        (p ":git-push") ;; <space>gp -> Git push
+        (f ":git-pull") ;; <space>gf -> Git pull
+        (r ":git-refresh") ;; <space>gr -> Refresh status
+        (q ":git-close")))))

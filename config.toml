@@ -11,7 +11,7 @@ bufferline = "multiple"
 popup-border = "popup"
 
 end-of-line-diagnostics = "hint"
-soft-wrap.enable = true
+# soft-wrap.enable = true
 
 # [editor.clipboard-provider.custom]
 # yank = { command = "xclip", args = ["-selection", "clipboard", "-o"] }
